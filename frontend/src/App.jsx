@@ -17,7 +17,7 @@ export default function App() {
       .catch(() => setNotes([]));
 
     // 2) Stable single WS connection
-    const ws = new WebSocket("ws://localhost:3002");
+    const ws = new WebSocket(import.meta.env.VITE_WEBSOCKET_URL);
     wsRef.current = ws;
 
     ws.onopen = () => setWsReady(true);
