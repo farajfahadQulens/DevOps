@@ -2,19 +2,19 @@ version: "3.9"
 
 services:
   backend:
-    image: ghcr.io/OWNER/REPO-backend:latest
+    image: ghcr.io/farajfahadqulens/devops-backend:latest
     restart: unless-stopped
     ports:
       - "3001:3001"
 
   realtime:
-    image: ghcr.io/OWNER/REPO-realtime:latest
+    image: ghcr.io/farajfahadqulens/devops-realtime:latest
     restart: unless-stopped
     ports:
       - "3002:3002"
 
   frontend:
-    image: ghcr.io/OWNER/REPO-frontend:latest
+    image: ghcr.io/farajfahadqulens/devops-frontend:latest
     restart: unless-stopped
     ports:
       - "8080:80"
