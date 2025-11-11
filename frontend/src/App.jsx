@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+const API_URL = "https://devops-backend-kuqq.onrender.com";
 const WS_URL  = import.meta.env.VITE_WS_URL  || "ws://localhost:3002";
 
 import { useEffect, useRef, useState } from "react";
@@ -17,7 +17,7 @@ export default function App() {
       .catch(() => setNotes([]));
 
     // 2) Stable single WS connection
-    const ws = new WebSocket(import.meta.env.VITE_WEBSOCKET_URL);
+    const ws = new WebSocket("wss://devops-realtime-sha.onrender.com");
     wsRef.current = ws;
 
     ws.onopen = () => setWsReady(true);
