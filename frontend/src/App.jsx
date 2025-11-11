@@ -34,8 +34,8 @@ export default function App() {
   }, []);
 
   const addNote = async () => {
-  if (wsReady ) 
-  {
+  
+  
     const payload = { text };
     const localNote = { text, time: new Date().toISOString() };
     setText("");
@@ -54,7 +54,7 @@ export default function App() {
     if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
       wsRef.current.send(JSON.stringify(localNote));
     }
-  }
+  
   };
 
   return (
