@@ -13,7 +13,7 @@ app.get("/notes", (req, res) => {
 
 app.post("/notes", (req, res) => {
   const { text } = req.body;
-  notes.push({ text, time: new Date() });
+  notes.push({ text, time: new Date() });npm
   res.json({ success: true });
 });
 
