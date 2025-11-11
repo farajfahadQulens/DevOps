@@ -2,19 +2,19 @@ version: "3.9"
 
 services:
   backend:
-    image: ghcr.io/farajfahadqulens/devops-backend:latest
+    image: ghcr.io/farajfahadqulens/devops-backend:sha-45ef1ab
     restart: unless-stopped
     ports:
       - "3001:3001"
 
   realtime:
-    image: ghcr.io/farajfahadqulens/devops-realtime:latest
+    image: ghcr.io/farajfahadqulens/devops-realtime:sha-45ef1ab
     restart: unless-stopped
     ports:
       - "3002:3002"
 
   frontend:
-    image: ghcr.io/farajfahadqulens/devops-frontend:latest
+    image: ghcr.io/farajfahadqulens/devops-frontend:sha-45ef1ab
     restart: unless-stopped
     ports:
       - "8080:80"
